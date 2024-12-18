@@ -11,7 +11,7 @@ namespace FacesheetParser
 {
     public partial class Import : Form
     {
-        public string cxnString = ConfigurationManager.ConnectionStrings["PdfTxtExtract.Properties.Settings.dmdtestConnectionString"].ConnectionString;
+        public string cxnString = ConfigurationManager.ConnectionStrings["FacesheetParser.Properties.Settings.dmdtestConnectionString"].ConnectionString;
         public string INFO = "INFO";
         public string ERROR = "ERROR";
         public string WARNING = "WARNING";
