@@ -27,6 +27,7 @@ namespace FacesheetParser
     }
     public class Contact
     {
+        public string PatientSSN { get; set; }
         public string Relationship { get; set; }
         public string Name { get; set; }
         public string Responsibilities { get; set; }
@@ -65,6 +66,7 @@ namespace FacesheetParser
 
         private void Setup()
         {
+            Program.Mlog("Running Setup tasks.");
             try
             {
                 DirectoryInfo di = new DirectoryInfo(txt);
@@ -72,6 +74,7 @@ namespace FacesheetParser
                 {
                     file.Delete();
                 }
+                Program.Mlog("Setup tasks complete.");
             }
             catch (Exception ex)
             {
@@ -131,8 +134,9 @@ namespace FacesheetParser
                         counter++;
 
                     }
-                    WriteToDb();
                 }
+                WriteToDb();
+                Setup();
                 Program.Mlog("Import process complete.");
                 Cursor = Cursors.Default;
             }
@@ -147,46 +151,49 @@ namespace FacesheetParser
             Program.Mlog("Beginning to write to the database.");
             try
             {
-                List<List<Patient>> records = new List<List<Patient>>();
+                List<Patient> records = new List<Patient>();
                 foreach (string file in Directory.EnumerateFiles(txt, "*.txt"))
                 {
                     var content = File.ReadAllLines(file).ToList();
                     var data = ParseData(content, file);
-                    records.Add(data);
+                    foreach (var d in data)
+                    {
+                        records.Add(d);
+                    }
                 }
-                foreach (var record in records)
+                using (var writer = new StreamWriter(@"..\..\patients.csv"))
                 {
-                        using (var writer = new StreamWriter(@"..\..\patients.csv"))
-                        {
-                            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-                            {
-                                csv.WriteRecords(record);
-                            }
-                        }
-
-                    //string sql = string.Empty;
-                    //using (SqlConnection conn = new SqlConnection(cxnString))
-                    //{
-                    //    conn.Open();
-                    //    using (SqlCommand command = new SqlCommand())
-                    //    {
-                    //        command.Connection = conn;
-                    //        command.CommandType = CommandType.Text;
-                    //        sql = string.Empty;
-                    //        sql = "INSERT INTO EOB_stage_DentaQuestFFSS (file_name, physician, total_submitted_amount, total_patient_pay, total_writeoff, total_plan_pay, claim_count) ";
-                    //        sql += "VALUES (@file_name, @physician, @total_submitted_amount, @total_patient_pay, @total_writeoff, @total_plan_pay, @claim_count)";
-                    //        command.CommandText = sql;
-                    //        command.Parameters.AddWithValue("@file_name", record["file_name"]);
-                    //        command.Parameters.AddWithValue("@physician", record["physician"]);
-                    //        command.Parameters.AddWithValue("@total_submitted_amount", record["total_submitted_amount"]);
-                    //        command.Parameters.AddWithValue("@total_patient_pay", record["total_patient_pay"]);
-                    //        command.Parameters.AddWithValue("@total_writeoff", record["total_writeoff"]);
-                    //        command.Parameters.AddWithValue("@total_plan_pay", record["total_plan_pay"]);
-                    //        command.Parameters.AddWithValue("@claim_count", record["claim_count"]);
-                    //        command.ExecuteNonQuery();
-                    //    }
-                    //}
+                    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                    {
+                        csv.WriteRecords(records);
+                    }
                 }
+                //List<Patient> singleList = new List<Patient>();
+                //foreach (var record in records)
+                //{
+                //string sql = string.Empty;
+                //using (SqlConnection conn = new SqlConnection(cxnString))
+                //{
+                //    conn.Open();
+                //    using (SqlCommand command = new SqlCommand())
+                //    {
+                //        command.Connection = conn;
+                //        command.CommandType = CommandType.Text;
+                //        sql = string.Empty;
+                //        sql = "INSERT INTO EOB_stage_DentaQuestFFSS (file_name, physician, total_submitted_amount, total_patient_pay, total_writeoff, total_plan_pay, claim_count) ";
+                //        sql += "VALUES (@file_name, @physician, @total_submitted_amount, @total_patient_pay, @total_writeoff, @total_plan_pay, @claim_count)";
+                //        command.CommandText = sql;
+                //        command.Parameters.AddWithValue("@file_name", record["file_name"]);
+                //        command.Parameters.AddWithValue("@physician", record["physician"]);
+                //        command.Parameters.AddWithValue("@total_submitted_amount", record["total_submitted_amount"]);
+                //        command.Parameters.AddWithValue("@total_patient_pay", record["total_patient_pay"]);
+                //        command.Parameters.AddWithValue("@total_writeoff", record["total_writeoff"]);
+                //        command.Parameters.AddWithValue("@total_plan_pay", record["total_plan_pay"]);
+                //        command.Parameters.AddWithValue("@claim_count", record["claim_count"]);
+                //        command.ExecuteNonQuery();
+                //    }
+                //}
+                //}
                 Program.Mlog("Writing to the database complete.");
             }
             catch (Exception ex)
@@ -306,7 +313,12 @@ namespace FacesheetParser
                     }
                 }
 
-                //patient.Contacts = ParseContacts();
+                int contacts_start = txt.IndexOf("Contacts") + 4;
+                int contacts_end = txt.IndexOf("Providers");
+                int contacts_count = contacts_end - contacts_start;
+                var contactsText = txt.GetRange(contacts_start, contacts_count);
+
+                patient.Contacts = ParseContacts(contactsText, ssn);
             }
             catch (Exception ex)
             {
@@ -315,12 +327,15 @@ namespace FacesheetParser
             return patient;
         }
 
-        private List<Contact> ParseContacts(List<string> contactsText)
+        private List<Contact> ParseContacts(List<string> contactsText, string ssn)
         {
             List<Contact> contacts = new List<Contact>();
             try
             {
                 Contact contact = new Contact();
+
+                contact.PatientSSN = ssn;
+
                 contacts.Add(contact);
             }
             catch (Exception ex)

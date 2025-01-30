@@ -1,239 +1,28 @@
-12/18/2024 9:20:10 PM | INFO | Beginning to import file(s).
-12/18/2024 9:22:01 PM | INFO | Beginning to import file(s).
-12/18/2024 9:22:09 PM | ERROR | System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\txt\resthavenyork_12_11_2024.txt'.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
-   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
-   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
-   at System.IO.File.WriteAllLines(String path, IEnumerable`1 contents)
-   at FacesheetParser.Import.btnImport_Click(Object sender, EventArgs e) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 97
-12/18/2024 9:22:39 PM | INFO | Beginning to import file(s).
-12/18/2024 9:22:43 PM | INFO | Import process complete.
-12/31/2024 4:53:14 PM | INFO | Beginning to import file(s).
-12/31/2024 4:53:18 PM | INFO | Import process complete.
-12/31/2024 4:54:14 PM | INFO | Beginning to import file(s).
-12/31/2024 4:54:37 PM | INFO | Import process complete.
-1/6/2025 10:40:39 PM | INFO | Beginning to import file(s).
-1/6/2025 10:41:13 PM | INFO | Import process complete.
-1/27/2025 5:41:49 AM | INFO | Beginning to import file(s).
-1/27/2025 5:42:06 AM | INFO | Import process complete.
-1/27/2025 5:42:38 AM | INFO | Beginning to import file(s).
-1/27/2025 5:42:44 AM | INFO | Import process complete.
-1/27/2025 5:45:10 AM | INFO | Beginning to import file(s).
-1/27/2025 5:45:15 AM | INFO | Beginning to write to the database.
-1/27/2025 5:45:15 AM | INFO | Beginning to parse data.
-1/27/2025 5:46:21 AM | INFO | Beginning to import file(s).
-1/27/2025 5:46:24 AM | INFO | Beginning to write to the database.
-1/27/2025 5:46:47 AM | INFO | Beginning to import file(s).
-1/27/2025 5:47:00 AM | INFO | Beginning to write to the database.
-1/27/2025 5:47:13 AM | INFO | Beginning to parse data.
-1/27/2025 5:49:11 AM | INFO | Beginning to import file(s).
-1/27/2025 5:49:16 AM | INFO | Beginning to write to the database.
-1/27/2025 5:49:20 AM | INFO | Beginning to parse data.
-1/27/2025 5:51:11 AM | INFO | Beginning to import file(s).
-1/27/2025 5:51:16 AM | INFO | Beginning to write to the database.
-1/27/2025 5:51:16 AM | INFO | Beginning to parse data.
-1/27/2025 5:51:48 AM | INFO | Beginning to import file(s).
-1/27/2025 5:51:53 AM | INFO | Beginning to write to the database.
-1/27/2025 5:51:53 AM | INFO | Beginning to parse data.
-1/27/2025 5:53:42 AM | INFO | Beginning to import file(s).
-1/27/2025 5:53:46 AM | INFO | Beginning to write to the database.
-1/27/2025 5:53:46 AM | INFO | Beginning to parse data.
-1/27/2025 5:54:31 AM | INFO | Beginning to import file(s).
-1/27/2025 5:54:36 AM | INFO | Beginning to write to the database.
-1/27/2025 5:54:36 AM | INFO | Beginning to parse data.
-1/27/2025 5:57:13 AM | INFO | Beginning to import file(s).
-1/27/2025 5:57:16 AM | INFO | Beginning to write to the database.
-1/27/2025 5:57:16 AM | INFO | Beginning to parse data.
-1/27/2025 6:04:21 AM | INFO | Beginning to import file(s).
-1/27/2025 6:04:26 AM | INFO | Beginning to write to the database.
-1/27/2025 6:04:26 AM | INFO | Beginning to parse data.
-1/27/2025 6:04:26 AM | ERROR | System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
-Parameter name: index
-   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
-   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 221
-1/27/2025 6:04:31 AM | INFO | Beginning to parse data.
-1/27/2025 6:04:31 AM | ERROR | System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
-Parameter name: index
-   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
-   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 221
-1/27/2025 6:04:33 AM | INFO | Writing to the database complete.
-1/27/2025 6:04:33 AM | INFO | Import process complete.
-1/27/2025 6:05:03 AM | INFO | Beginning to import file(s).
-1/27/2025 6:05:06 AM | INFO | Beginning to write to the database.
-1/27/2025 6:05:06 AM | INFO | Beginning to parse data.
-1/27/2025 6:05:06 AM | ERROR | System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
-Parameter name: index
-   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
-   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 229
-1/27/2025 6:05:10 AM | INFO | Beginning to parse data.
-1/27/2025 6:05:10 AM | ERROR | System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
-Parameter name: index
-   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
-   at System.Collections.Generic.List`1.get_Item(Int32 index)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 229
-1/27/2025 6:05:11 AM | INFO | Writing to the database complete.
-1/27/2025 6:05:11 AM | INFO | Import process complete.
-1/27/2025 6:05:52 AM | INFO | Beginning to import file(s).
-1/27/2025 6:05:55 AM | INFO | Beginning to write to the database.
-1/27/2025 6:05:55 AM | INFO | Beginning to parse data.
-1/27/2025 6:07:43 AM | INFO | Beginning to import file(s).
-1/27/2025 6:07:47 AM | INFO | Beginning to write to the database.
-1/27/2025 6:07:47 AM | INFO | Beginning to parse data.
-1/27/2025 6:08:36 AM | INFO | Beginning to import file(s).
-1/27/2025 6:08:40 AM | INFO | Beginning to write to the database.
-1/27/2025 6:08:40 AM | INFO | Beginning to parse data.
-1/27/2025 6:10:11 AM | INFO | Beginning to import file(s).
-1/27/2025 6:10:15 AM | INFO | Beginning to write to the database.
-1/27/2025 6:10:15 AM | INFO | Beginning to parse data.
-1/27/2025 6:10:50 AM | INFO | Beginning to import file(s).
-1/27/2025 6:10:55 AM | INFO | Beginning to write to the database.
-1/27/2025 6:10:55 AM | INFO | Beginning to parse data.
-1/27/2025 6:12:45 AM | INFO | Beginning to import file(s).
-1/27/2025 6:12:49 AM | INFO | Beginning to write to the database.
-1/27/2025 6:12:49 AM | INFO | Beginning to parse data.
-1/27/2025 6:16:00 AM | INFO | Beginning to import file(s).
-1/27/2025 6:16:08 AM | INFO | Beginning to write to the database.
-1/27/2025 6:16:08 AM | INFO | Beginning to parse data.
-1/27/2025 6:16:51 AM | INFO | Beginning to import file(s).
-1/27/2025 6:16:53 AM | INFO | Import process complete.
-1/27/2025 6:17:02 AM | INFO | Beginning to import file(s).
-1/27/2025 6:17:07 AM | INFO | Beginning to write to the database.
-1/27/2025 6:17:07 AM | INFO | Beginning to parse data.
-1/27/2025 6:17:20 AM | INFO | Parsing complete.
-1/27/2025 6:17:20 AM | INFO | Beginning to parse data.
-1/27/2025 6:17:35 AM | INFO | Parsing complete.
-1/27/2025 6:17:35 AM | INFO | Writing to the database complete.
-1/27/2025 6:17:35 AM | INFO | Import process complete.
-1/27/2025 6:24:55 AM | INFO | Beginning to import file(s).
-1/27/2025 6:25:00 AM | INFO | Beginning to write to the database.
-1/27/2025 6:25:00 AM | INFO | Beginning to parse data.
-1/27/2025 6:25:56 AM | INFO | Beginning to import file(s).
-1/27/2025 6:26:00 AM | INFO | Beginning to write to the database.
-1/27/2025 6:26:00 AM | INFO | Beginning to parse data.
-1/27/2025 6:27:14 AM | INFO | Beginning to import file(s).
-1/27/2025 6:27:18 AM | INFO | Beginning to write to the database.
-1/27/2025 6:27:18 AM | INFO | Beginning to parse data.
-1/27/2025 6:28:59 AM | INFO | Parsing complete.
-1/27/2025 6:28:59 AM | INFO | Beginning to parse data.
-1/27/2025 7:04:46 AM | INFO | Beginning to import file(s).
-1/27/2025 7:04:51 AM | INFO | Beginning to write to the database.
-1/27/2025 7:04:51 AM | INFO | Beginning to parse data.
-1/27/2025 7:05:01 AM | INFO | Parsing complete.
-1/27/2025 7:05:30 AM | INFO | Beginning to parse data.
-1/27/2025 7:05:39 AM | INFO | Parsing complete.
-1/27/2025 7:06:04 AM | INFO | Writing to the database complete.
-1/27/2025 7:06:04 AM | INFO | Import process complete.
-1/27/2025 7:18:05 AM | INFO | Beginning to import file(s).
-1/27/2025 7:18:11 AM | INFO | Beginning to write to the database.
-1/27/2025 7:18:11 AM | INFO | Beginning to parse data.
-1/27/2025 7:20:37 AM | INFO | Beginning to import file(s).
-1/27/2025 7:20:41 AM | INFO | Beginning to write to the database.
-1/27/2025 7:20:41 AM | INFO | Beginning to parse data.
-1/27/2025 7:21:20 AM | ERROR | System.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at FacesheetParser.Import.ParsePatient(List`1 txt, String fileName) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 255
-1/27/2025 7:22:33 AM | INFO | Beginning to import file(s).
-1/27/2025 7:22:37 AM | INFO | Beginning to write to the database.
-1/27/2025 7:22:37 AM | INFO | Beginning to parse data.
-1/27/2025 7:24:58 AM | INFO | Beginning to import file(s).
-1/27/2025 7:25:04 AM | INFO | Beginning to write to the database.
-1/27/2025 7:25:04 AM | INFO | Beginning to parse data.
-1/27/2025 7:31:22 AM | INFO | Beginning to import file(s).
-1/27/2025 7:31:27 AM | INFO | Beginning to write to the database.
-1/27/2025 7:31:27 AM | INFO | Beginning to parse data.
-1/27/2025 7:33:36 AM | INFO | Beginning to import file(s).
-1/27/2025 7:33:40 AM | INFO | Beginning to write to the database.
-1/27/2025 7:33:40 AM | INFO | Beginning to parse data.
-1/27/2025 7:34:29 AM | INFO | Parsing complete.
-1/27/2025 7:34:47 AM | INFO | Beginning to parse data.
-1/27/2025 7:35:59 AM | INFO | Beginning to import file(s).
-1/27/2025 7:36:04 AM | INFO | Beginning to write to the database.
-1/27/2025 7:36:04 AM | INFO | Beginning to parse data.
-1/27/2025 7:36:08 AM | ERROR | System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
-   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
-   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 229
-1/27/2025 7:36:39 AM | INFO | Beginning to parse data.
-1/27/2025 7:36:44 AM | INFO | Beginning to import file(s).
-1/27/2025 7:36:48 AM | INFO | Beginning to write to the database.
-1/27/2025 7:36:48 AM | INFO | Beginning to parse data.
-1/27/2025 7:36:51 AM | ERROR | System.ArgumentException: Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.
-   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
-   at System.Collections.Generic.List`1.GetRange(Int32 index, Int32 count)
-   at FacesheetParser.Import.ParseData(List`1 txt, String file) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 229
-1/27/2025 7:38:30 AM | INFO | Beginning to import file(s).
-1/27/2025 7:38:35 AM | INFO | Beginning to write to the database.
-1/27/2025 7:38:35 AM | INFO | Beginning to parse data.
-1/27/2025 7:39:58 AM | INFO | Beginning to import file(s).
-1/27/2025 7:40:02 AM | INFO | Beginning to write to the database.
-1/27/2025 7:40:02 AM | INFO | Beginning to parse data.
-1/27/2025 7:40:35 AM | INFO | Parsing complete.
-1/27/2025 7:40:44 AM | INFO | Beginning to parse data.
-1/27/2025 7:44:58 AM | INFO | Beginning to import file(s).
-1/27/2025 7:45:02 AM | INFO | Beginning to write to the database.
-1/27/2025 7:45:02 AM | INFO | Beginning to parse data.
-1/27/2025 7:45:32 AM | INFO | Parsing complete.
-1/27/2025 7:45:33 AM | INFO | Beginning to parse data.
-1/27/2025 7:46:16 AM | INFO | Parsing complete.
-1/27/2025 7:47:16 AM | INFO | Beginning to import file(s).
-1/27/2025 7:47:21 AM | INFO | Beginning to write to the database.
-1/27/2025 7:47:21 AM | INFO | Beginning to parse data.
-1/27/2025 7:48:58 AM | INFO | Parsing complete.
-1/27/2025 7:48:59 AM | INFO | Beginning to parse data.
-1/27/2025 7:50:51 AM | INFO | Beginning to import file(s).
-1/27/2025 7:50:56 AM | INFO | Beginning to write to the database.
-1/27/2025 7:50:56 AM | INFO | Beginning to parse data.
-1/27/2025 7:51:28 AM | INFO | Parsing complete.
-1/27/2025 7:51:29 AM | INFO | Beginning to parse data.
-1/27/2025 7:53:49 AM | INFO | Beginning to import file(s).
-1/27/2025 7:53:53 AM | INFO | Beginning to write to the database.
-1/27/2025 7:53:53 AM | INFO | Beginning to parse data.
-1/27/2025 7:54:26 AM | INFO | Parsing complete.
-1/27/2025 7:54:37 AM | INFO | Beginning to parse data.
-1/27/2025 7:55:41 AM | ERROR | System.ArgumentOutOfRangeException: Length cannot be less than zero.
-Parameter name: length
-   at System.String.Substring(Int32 startIndex, Int32 length)
-   at FacesheetParser.Import.ParsePatient(List`1 txt, String fileName) in C:\Users\jason\OneDrive\Desktop\repos\dmd\facesheet\FacesheetParser\Import.cs:line 259
-1/27/2025 7:56:32 AM | INFO | Beginning to import file(s).
-1/27/2025 7:56:36 AM | INFO | Beginning to write to the database.
-1/27/2025 7:56:36 AM | INFO | Beginning to parse data.
-1/27/2025 7:56:41 AM | INFO | Parsing complete.
-1/27/2025 7:56:42 AM | INFO | Beginning to parse data.
-1/27/2025 7:57:26 AM | INFO | Beginning to import file(s).
-1/27/2025 7:57:30 AM | INFO | Beginning to write to the database.
-1/27/2025 7:57:30 AM | INFO | Beginning to parse data.
-1/27/2025 7:57:33 AM | INFO | Parsing complete.
-1/27/2025 7:57:35 AM | INFO | Beginning to parse data.
-1/27/2025 8:01:42 AM | INFO | Beginning to import file(s).
-1/27/2025 8:01:46 AM | INFO | Beginning to write to the database.
-1/27/2025 8:01:46 AM | INFO | Beginning to parse data.
-1/27/2025 8:01:50 AM | INFO | Parsing complete.
-1/27/2025 8:01:58 AM | INFO | Beginning to parse data.
-1/27/2025 8:01:58 AM | INFO | Parsing complete.
-1/27/2025 8:11:51 AM | INFO | Beginning to import file(s).
-1/27/2025 8:11:55 AM | INFO | Beginning to write to the database.
-1/27/2025 8:11:55 AM | INFO | Beginning to parse data.
-1/27/2025 8:11:55 AM | INFO | Parsing complete.
-1/27/2025 8:12:10 AM | INFO | Beginning to parse data.
-1/27/2025 8:12:10 AM | INFO | Parsing complete.
-1/27/2025 8:17:45 AM | INFO | Beginning to import file(s).
-1/27/2025 8:17:50 AM | INFO | Beginning to write to the database.
-1/27/2025 8:17:50 AM | INFO | Beginning to parse data.
-1/27/2025 8:17:50 AM | INFO | Parsing complete.
-1/27/2025 8:17:50 AM | INFO | Beginning to parse data.
-1/27/2025 8:17:50 AM | INFO | Parsing complete.
-1/27/2025 8:22:15 AM | INFO | Beginning to import file(s).
-1/27/2025 8:22:21 AM | INFO | Beginning to write to the database.
-1/27/2025 8:22:21 AM | INFO | Beginning to parse data.
-1/27/2025 8:22:21 AM | INFO | Parsing complete.
-1/27/2025 8:22:21 AM | INFO | Beginning to parse data.
-1/27/2025 8:22:21 AM | INFO | Parsing complete.
-1/27/2025 8:22:21 AM | INFO | Writing to the database complete.
-1/27/2025 8:22:21 AM | INFO | Import process complete.
+1/28/2025 5:32:19 PM | INFO | Beginning to import file(s).
+1/28/2025 5:32:25 PM | INFO | Beginning to write to the database.
+1/28/2025 5:32:25 PM | INFO | Beginning to parse data.
+1/28/2025 5:32:25 PM | INFO | Parsing complete.
+1/28/2025 5:32:25 PM | INFO | Writing to the database complete.
+1/28/2025 5:32:25 PM | INFO | Running Setup tasks.
+1/28/2025 5:32:25 PM | INFO | Setup tasks complete.
+1/28/2025 5:32:25 PM | INFO | Beginning to write to the database.
+1/28/2025 5:32:25 PM | INFO | Beginning to parse data.
+1/28/2025 5:32:25 PM | INFO | Parsing complete.
+1/28/2025 5:32:25 PM | INFO | Writing to the database complete.
+1/28/2025 5:32:25 PM | INFO | Running Setup tasks.
+1/28/2025 5:32:25 PM | INFO | Setup tasks complete.
+1/28/2025 5:32:25 PM | INFO | Import process complete.
+1/28/2025 5:33:05 PM | INFO | Beginning to import file(s).
+1/28/2025 5:33:18 PM | INFO | Beginning to write to the database.
+1/28/2025 5:33:18 PM | INFO | Beginning to parse data.
+1/28/2025 5:33:18 PM | INFO | Parsing complete.
+1/28/2025 5:35:19 PM | INFO | Beginning to import file(s).
+1/28/2025 5:35:27 PM | INFO | Beginning to write to the database.
+1/28/2025 5:35:27 PM | INFO | Beginning to parse data.
+1/28/2025 5:35:27 PM | INFO | Parsing complete.
+1/28/2025 5:35:27 PM | INFO | Beginning to parse data.
+1/28/2025 5:35:27 PM | INFO | Parsing complete.
+1/28/2025 5:35:42 PM | INFO | Writing to the database complete.
+1/28/2025 5:35:42 PM | INFO | Running Setup tasks.
+1/28/2025 5:35:42 PM | INFO | Setup tasks complete.
+1/28/2025 5:35:42 PM | INFO | Import process complete.
